@@ -13,7 +13,7 @@ struct ContentView: View {
             Color(.green)
                 .ignoresSafeArea()
             VStack {
-                Text("atah")
+                Text("ahta")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
             }
