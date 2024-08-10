@@ -16,6 +16,7 @@ struct ContentView: View {
                 Text("ahta")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
+                Text("another habit tracking app")
             }
         }
     }
