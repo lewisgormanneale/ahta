@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED629A5D2C6AAFF000E19A6B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		EDB3E65C2C14B42C0081DD47 /* ahta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ahta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB3E65F2C14B42C0081DD47 /* ahtaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ahtaApp.swift; sourceTree = "<group>"; };
 		EDB3E6612C14B42C0081DD47 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 		EDB3E6532C14B42C0081DD47 = {
 			isa = PBXGroup;
 			children = (
+				ED629A5D2C6AAFF000E19A6B /* .gitignore */,
 				EDB3E65E2C14B42C0081DD47 /* ahta */,
 				EDB3E66F2C14B42D0081DD47 /* ahtaTests */,
 				EDB3E6792C14B42D0081DD47 /* ahtaUITests */,
