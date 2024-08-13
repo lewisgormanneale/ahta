@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let tasks = ["Task 1", "Task 2", "Task 3"]
+    let habits = ["Hoover", "Exercise", "Coding Practice"]
 
     var body: some View {
         ZStack {
@@ -21,8 +21,8 @@ struct ContentView: View {
                 Text("another habit tracking app")
                 ZStack {
                    List {
-                        ForEach(tasks, id: \.self) { task in
-                            Text(task)
+                        ForEach(habits, id: \.self) { habit in
+                            Text(habit)
                         }
                     }
                     .scrollContentBackground(.hidden)
