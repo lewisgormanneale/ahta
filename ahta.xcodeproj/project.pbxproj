@@ -219,6 +219,7 @@
 			mainGroup = EDB3E6532C14B42C0081DD47;
 			packageReferences = (
 				ED629A5C2C6AAC2C00E19A6B /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
+				ED0A39612C6D4A2F000DE564 /* XCRemoteSwiftPackageReference "supabase-swift" */,
 			);
 			productRefGroup = EDB3E65D2C14B42C0081DD47 /* Products */;
 			projectDirPath = "";
@@ -595,6 +596,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		ED0A39612C6D4A2F000DE564 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
 		ED629A5C2C6AAC2C00E19A6B /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins";
