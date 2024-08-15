@@ -1,0 +1,51 @@
+{
+  "originHash" : "0ab9492c6e3942fd6de02bcc17a9f6f01e57e892215f84f43664bfff827e4b3a",
+  "pins" : [
+    {
+      "identity" : "supabase-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/supabase-community/supabase-swift.git",
+      "state" : {
+        "revision" : "4c966eafaaebc893a418e6334ef67beb0287a9ad",
+        "version" : "2.16.1"
+      }
+    },
+    {
+      "identity" : "swift-concurrency-extras",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-concurrency-extras",
+      "state" : {
+        "revision" : "bb5059bde9022d69ac516803f4f227d8ac967f71",
+        "version" : "1.1.0"
+      }
+    },
+    {
+      "identity" : "swift-crypto",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-crypto.git",
+      "state" : {
+        "revision" : "a53a7e8f858902659d4784322bede34f4e49097e",
+        "version" : "3.6.1"
+      }
+    },
+    {
+      "identity" : "swiftlintplugins",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SimplyDanny/SwiftLintPlugins",
+      "state" : {
+        "revision" : "9ad9487c2448b3f1265ea2cc8af246b9cae6878d",
+        "version" : "0.56.1"
+      }
+    },
+    {
+      "identity" : "xctest-dynamic-overlay",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/xctest-dynamic-overlay",
+      "state" : {
+        "revision" : "c6809a193975cab4d5308c64bd1d51e0df467928",
+        "version" : "1.2.3"
+      }
+    }
+  ],
+  "version" : 3
+}
