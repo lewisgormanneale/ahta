@@ -23,6 +23,7 @@
 		EDD40BF72CA0ABC9005B25DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDD40BF12CA0ABC9005B25DC /* Assets.xcassets */; };
 		EDD40BF82CA0ABC9005B25DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDD40BEB2CA0ABC9005B25DC /* Preview Assets.xcassets */; };
 		EDD40C052CA0AC28005B25DC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EDD40C042CA0AC28005B25DC /* README.md */; };
+		EDD40C072CA0BA8B005B25DC /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD40C062CA0BA8B005B25DC /* AddHabitView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		EDD40BF02CA0ABC9005B25DC /* ahtaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ahtaApp.swift; sourceTree = "<group>"; };
 		EDD40BF12CA0ABC9005B25DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDD40C042CA0AC28005B25DC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EDD40C062CA0BA8B005B25DC /* AddHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			children = (
 				EDD40BED2CA0ABC9005B25DC /* ContentView.swift */,
 				EDD40BEE2CA0ABC9005B25DC /* HabitRow.swift */,
+				EDD40C062CA0BA8B005B25DC /* AddHabitView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				EDD40BF42CA0ABC9005B25DC /* ahtaApp.swift in Sources */,
 				EDD40BF52CA0ABC9005B25DC /* HabitRow.swift in Sources */,
 				EDD40BF62CA0ABC9005B25DC /* Habit.swift in Sources */,
+				EDD40C072CA0BA8B005B25DC /* AddHabitView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

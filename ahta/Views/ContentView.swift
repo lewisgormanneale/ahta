@@ -3,37 +3,64 @@ import SwiftUI
 struct ContentView: View {
     @State private var habits: [Habit] = []
     @State private var currentTime = Date()
-    @State private var newHabitName = ""
+    @State private var isAddingHabit = false
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     var body: some View {
-        VStack {
-            Text("ahta")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding()
-            
-            ScrollView {
-                VStack(spacing: 0) {
-                    ForEach(habits) { habit in
-                        HabitRow(habit: habit, currentTime: currentTime, onComplete: { completeHabit(habit) })
+        ZStack {
+            VStack {
+                Text("ahta")
+                    .font(.system(size: 48, weight: .heavy, design: .serif))
+                    .padding()
+                
+                ScrollView {
+                    VStack(spacing: 0) {
+                        ForEach(habits) { habit in
+                            HabitRow(habit: habit, currentTime: currentTime, onComplete: {
+                                completeHabit(habit)
+                            })
+                        }
                     }
                 }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.green.opacity(0.3))
+            .onAppear(perform: loadHabits)
+            .onReceive(timer) { _ in
+                currentTime = Date()
+            }
+            
+            VStack {
+                Spacer()
+                Button(action: {
+                    isAddingHabit = true
+                }) {
+                    HStack {
+                        Text("Add Habit")
+                            .font(.system(size: 24, weight: .bold, design: .serif))
+                            .foregroundColor(.primary)
+                        Spacer()
+                        Image(systemName: "plus.circle.fill")
+                            .font(.system(size: 24))
+                            .foregroundColor(.green)
+                    }
+                    .padding()
+                    .background(Color(UIColor.systemBackground))
+                    .cornerRadius(15)
+                    .shadow(radius: 5)
+                }
+                .padding(.horizontal, 50)
+                .padding(.bottom, 10)
+            }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.green.opacity(0.3))
-        .onAppear(perform: loadHabits)
-        .onReceive(timer) { _ in
-            currentTime = Date()
+        .sheet(isPresented: $isAddingHabit) {
+            AddHabitView(isPresented: $isAddingHabit, onSave: addHabit)
         }
     }
 
-    func addHabit() {
-        guard !newHabitName.isEmpty else { return }
-        let habit = Habit(name: newHabitName)
-        habits.append(habit)
-        newHabitName = ""
+    func addHabit(_ name: String) {
+        let newHabit = Habit(name: name)
+        habits.append(newHabit)
         saveHabits()
     }
 
