@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ED0A39632C6D4A77000DE564 /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0A39622C6D4A77000DE564 /* Supabase.swift */; };
 		ED96842D2C6D4BF20021E3E4 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = ED96842C2C6D4BF20021E3E4 /* Auth */; };
 		ED96842F2C6D4BF20021E3E4 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = ED96842E2C6D4BF20021E3E4 /* Functions */; };
 		ED9684312C6D4BF20021E3E4 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = ED9684302C6D4BF20021E3E4 /* PostgREST */; };
@@ -21,6 +20,7 @@
 		EDB3E6712C14B42D0081DD47 /* ahtaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB3E6702C14B42D0081DD47 /* ahtaTests.swift */; };
 		EDB3E67B2C14B42D0081DD47 /* ahtaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB3E67A2C14B42D0081DD47 /* ahtaUITests.swift */; };
 		EDB3E67D2C14B42D0081DD47 /* ahtaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB3E67C2C14B42D0081DD47 /* ahtaUITestsLaunchTests.swift */; };
+		EDD40BE82CA0A4AC005B25DC /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD40BE62CA0A4AC005B25DC /* Habit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		ED0A39622C6D4A77000DE564 /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
 		ED629A5D2C6AAFF000E19A6B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		EDB3E65C2C14B42C0081DD47 /* ahta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ahta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB3E65F2C14B42C0081DD47 /* ahtaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ahtaApp.swift; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		EDB3E6762C14B42D0081DD47 /* ahtaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ahtaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB3E67A2C14B42D0081DD47 /* ahtaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ahtaUITests.swift; sourceTree = "<group>"; };
 		EDB3E67C2C14B42D0081DD47 /* ahtaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ahtaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EDD40BE62CA0A4AC005B25DC /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,14 +86,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ED9684382C6E80E80021E3E4 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				ED0A39622C6D4A77000DE564 /* Supabase.swift */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
 		EDB3E6532C14B42C0081DD47 = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +110,7 @@
 		EDB3E65E2C14B42C0081DD47 /* ahta */ = {
 			isa = PBXGroup;
 			children = (
-				ED9684382C6E80E80021E3E4 /* Networking */,
+				EDD40BE72CA0A4AC005B25DC /* Models */,
 				EDB3E65F2C14B42C0081DD47 /* ahtaApp.swift */,
 				EDB3E6612C14B42C0081DD47 /* ContentView.swift */,
 				EDB3E6632C14B42D0081DD47 /* Assets.xcassets */,
@@ -150,6 +142,14 @@
 				EDB3E67C2C14B42D0081DD47 /* ahtaUITestsLaunchTests.swift */,
 			);
 			path = ahtaUITests;
+			sourceTree = "<group>";
+		};
+		EDD40BE72CA0A4AC005B25DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EDD40BE62CA0A4AC005B25DC /* Habit.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,8 +294,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD40BE82CA0A4AC005B25DC /* Habit.swift in Sources */,
 				EDB3E6622C14B42C0081DD47 /* ContentView.swift in Sources */,
-				ED0A39632C6D4A77000DE564 /* Supabase.swift in Sources */,
 				EDB3E6602C14B42C0081DD47 /* ahtaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

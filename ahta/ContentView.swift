@@ -8,63 +8,80 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var viewModel = HabitViewModel()
+    @State private var habits: [Habit] = []
+    @State private var newHabitName: String = ""
 
     var body: some View {
-        ZStack {
-            Color.green
-                .ignoresSafeArea()
-            VStack {
-                Text("ahta")
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
-                Text("another habit tracking app")
-                ZStack {
-                   List {
-                        ForEach(viewModel.habits) { habit in
-                            HabitView(habit: habit)
+        NavigationView {
+            List {
+                Section(header: Text("Add New Habit")) {
+                    HStack {
+                        TextField("New habit name", text: $newHabitName)
+                        Button(action: addHabit) {
+                            Image(systemName: "plus.circle.fill")
                         }
                     }
-                    .scrollContentBackground(.hidden)
+                }
+
+                Section(header: Text("Your Habits")) {
+                    ForEach(habits) { habit in
+                        HStack {
+                            Text(habit.name)
+                            Spacer()
+                            Button(action: { toggleHabit(habit) }) {
+                                Image(systemName: isHabitCompletedToday(habit) ? "checkmark.circle.fill" : "circle")
+                            }
+                        }
+                    }
+                    .onDelete(perform: deleteHabits)
                 }
             }
+            .navigationTitle("Habit Tracker")
+            .onAppear(perform: loadHabits)
         }
-        .onAppear {
-            Task {
-                await viewModel.fetchHabits()
+    }
+
+    func addHabit() {
+        guard !newHabitName.isEmpty else { return }
+        let habit = Habit(name: newHabitName, completedDates: [])
+        habits.append(habit)
+        newHabitName = ""
+        saveHabits()
+    }
+
+    func toggleHabit(_ habit: Habit) {
+        if let index = habits.firstIndex(where: { $0.id == habit.id }) {
+            let today = Calendar.current.startOfDay(for: Date())
+            if let completedIndex = habits[index].completedDates.firstIndex(of: today) {
+                habits[index].completedDates.remove(at: completedIndex)
+            } else {
+                habits[index].completedDates.append(today)
             }
-        }
-    }
-}
-
-struct HabitView: View {
-    let habit: Habit
-    @State private var elapsedTime: String = ""
-
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text(habit.name)
-                .font(.headline)
-            Text("Last done: \(elapsedTime)")
-                .font(.subheadline)
-                .foregroundColor(.gray)
-        }
-        .padding()
-        .background(Color.white)
-        .cornerRadius(10)
-        .shadow(radius: 5)
-        .onAppear {
-            startTimer()
+            saveHabits()
         }
     }
 
-    func startTimer() {
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            let interval = Date().timeIntervalSince(habit.lastDone)
-            let hours = Int(interval) / 3600
-            let minutes = (Int(interval) % 3600) / 60
-            let seconds = Int(interval) % 60
-            elapsedTime = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+    func deleteHabits(at offsets: IndexSet) {
+        habits.remove(atOffsets: offsets)
+        saveHabits()
+    }
+
+    func isHabitCompletedToday(_ habit: Habit) -> Bool {
+        let today = Calendar.current.startOfDay(for: Date())
+        return habit.completedDates.contains(today)
+    }
+
+    func saveHabits() {
+        if let encoded = try? JSONEncoder().encode(habits) {
+            UserDefaults.standard.set(encoded, forKey: "SavedHabits")
+        }
+    }
+
+    func loadHabits() {
+        if let savedHabits = UserDefaults.standard.data(forKey: "SavedHabits") {
+            if let decodedHabits = try? JSONDecoder().decode([Habit].self, from: savedHabits) {
+                habits = decodedHabits
+            }
         }
     }
 }
