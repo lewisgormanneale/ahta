@@ -13,14 +13,16 @@
 		ED9684332C6D4BF20021E3E4 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = ED9684322C6D4BF20021E3E4 /* Realtime */; };
 		ED9684352C6D4BF20021E3E4 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = ED9684342C6D4BF20021E3E4 /* Storage */; };
 		ED9684372C6D4BF20021E3E4 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = ED9684362C6D4BF20021E3E4 /* Supabase */; };
-		EDB3E6602C14B42C0081DD47 /* ahtaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB3E65F2C14B42C0081DD47 /* ahtaApp.swift */; };
-		EDB3E6622C14B42C0081DD47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB3E6612C14B42C0081DD47 /* ContentView.swift */; };
-		EDB3E6642C14B42D0081DD47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB3E6632C14B42D0081DD47 /* Assets.xcassets */; };
-		EDB3E6672C14B42D0081DD47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB3E6662C14B42D0081DD47 /* Preview Assets.xcassets */; };
 		EDB3E6712C14B42D0081DD47 /* ahtaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB3E6702C14B42D0081DD47 /* ahtaTests.swift */; };
 		EDB3E67B2C14B42D0081DD47 /* ahtaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB3E67A2C14B42D0081DD47 /* ahtaUITests.swift */; };
 		EDB3E67D2C14B42D0081DD47 /* ahtaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB3E67C2C14B42D0081DD47 /* ahtaUITestsLaunchTests.swift */; };
-		EDD40BE82CA0A4AC005B25DC /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD40BE62CA0A4AC005B25DC /* Habit.swift */; };
+		EDD40BF32CA0ABC9005B25DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD40BED2CA0ABC9005B25DC /* ContentView.swift */; };
+		EDD40BF42CA0ABC9005B25DC /* ahtaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD40BF02CA0ABC9005B25DC /* ahtaApp.swift */; };
+		EDD40BF52CA0ABC9005B25DC /* HabitRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD40BEE2CA0ABC9005B25DC /* HabitRow.swift */; };
+		EDD40BF62CA0ABC9005B25DC /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD40BE92CA0ABC9005B25DC /* Habit.swift */; };
+		EDD40BF72CA0ABC9005B25DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDD40BF12CA0ABC9005B25DC /* Assets.xcassets */; };
+		EDD40BF82CA0ABC9005B25DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDD40BEB2CA0ABC9005B25DC /* Preview Assets.xcassets */; };
+		EDD40C052CA0AC28005B25DC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EDD40C042CA0AC28005B25DC /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,16 +45,18 @@
 /* Begin PBXFileReference section */
 		ED629A5D2C6AAFF000E19A6B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		EDB3E65C2C14B42C0081DD47 /* ahta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ahta.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDB3E65F2C14B42C0081DD47 /* ahtaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ahtaApp.swift; sourceTree = "<group>"; };
-		EDB3E6612C14B42C0081DD47 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EDB3E6632C14B42D0081DD47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EDB3E6662C14B42D0081DD47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EDB3E66C2C14B42D0081DD47 /* ahtaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ahtaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB3E6702C14B42D0081DD47 /* ahtaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ahtaTests.swift; sourceTree = "<group>"; };
 		EDB3E6762C14B42D0081DD47 /* ahtaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ahtaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB3E67A2C14B42D0081DD47 /* ahtaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ahtaUITests.swift; sourceTree = "<group>"; };
 		EDB3E67C2C14B42D0081DD47 /* ahtaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ahtaUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EDD40BE62CA0A4AC005B25DC /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		EDD40BE92CA0ABC9005B25DC /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		EDD40BEB2CA0ABC9005B25DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDD40BED2CA0ABC9005B25DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EDD40BEE2CA0ABC9005B25DC /* HabitRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitRow.swift; sourceTree = "<group>"; };
+		EDD40BF02CA0ABC9005B25DC /* ahtaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ahtaApp.swift; sourceTree = "<group>"; };
+		EDD40BF12CA0ABC9005B25DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDD40C042CA0AC28005B25DC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +93,9 @@
 		EDB3E6532C14B42C0081DD47 = {
 			isa = PBXGroup;
 			children = (
+				EDD40C042CA0AC28005B25DC /* README.md */,
+				EDD40BF22CA0ABC9005B25DC /* ahta */,
 				ED629A5D2C6AAFF000E19A6B /* .gitignore */,
-				EDB3E65E2C14B42C0081DD47 /* ahta */,
 				EDB3E66F2C14B42D0081DD47 /* ahtaTests */,
 				EDB3E6792C14B42D0081DD47 /* ahtaUITests */,
 				EDB3E65D2C14B42C0081DD47 /* Products */,
@@ -105,26 +110,6 @@
 				EDB3E6762C14B42D0081DD47 /* ahtaUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		EDB3E65E2C14B42C0081DD47 /* ahta */ = {
-			isa = PBXGroup;
-			children = (
-				EDD40BE72CA0A4AC005B25DC /* Models */,
-				EDB3E65F2C14B42C0081DD47 /* ahtaApp.swift */,
-				EDB3E6612C14B42C0081DD47 /* ContentView.swift */,
-				EDB3E6632C14B42D0081DD47 /* Assets.xcassets */,
-				EDB3E6652C14B42D0081DD47 /* Preview Content */,
-			);
-			path = ahta;
-			sourceTree = "<group>";
-		};
-		EDB3E6652C14B42D0081DD47 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				EDB3E6662C14B42D0081DD47 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		EDB3E66F2C14B42D0081DD47 /* ahtaTests */ = {
@@ -144,12 +129,41 @@
 			path = ahtaUITests;
 			sourceTree = "<group>";
 		};
-		EDD40BE72CA0A4AC005B25DC /* Models */ = {
+		EDD40BEA2CA0ABC9005B25DC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EDD40BE62CA0A4AC005B25DC /* Habit.swift */,
+				EDD40BE92CA0ABC9005B25DC /* Habit.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EDD40BEC2CA0ABC9005B25DC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EDD40BEB2CA0ABC9005B25DC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDD40BEF2CA0ABC9005B25DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EDD40BED2CA0ABC9005B25DC /* ContentView.swift */,
+				EDD40BEE2CA0ABC9005B25DC /* HabitRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EDD40BF22CA0ABC9005B25DC /* ahta */ = {
+			isa = PBXGroup;
+			children = (
+				EDD40BEA2CA0ABC9005B25DC /* Models */,
+				EDD40BEC2CA0ABC9005B25DC /* Preview Content */,
+				EDD40BEF2CA0ABC9005B25DC /* Views */,
+				EDD40BF02CA0ABC9005B25DC /* ahtaApp.swift */,
+				EDD40BF12CA0ABC9005B25DC /* Assets.xcassets */,
+			);
+			path = ahta;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,8 +282,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDB3E6672C14B42D0081DD47 /* Preview Assets.xcassets in Resources */,
-				EDB3E6642C14B42D0081DD47 /* Assets.xcassets in Resources */,
+				EDD40C052CA0AC28005B25DC /* README.md in Resources */,
+				EDD40BF72CA0ABC9005B25DC /* Assets.xcassets in Resources */,
+				EDD40BF82CA0ABC9005B25DC /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,9 +309,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDD40BE82CA0A4AC005B25DC /* Habit.swift in Sources */,
-				EDB3E6622C14B42C0081DD47 /* ContentView.swift in Sources */,
-				EDB3E6602C14B42C0081DD47 /* ahtaApp.swift in Sources */,
+				EDD40BF32CA0ABC9005B25DC /* ContentView.swift in Sources */,
+				EDD40BF42CA0ABC9005B25DC /* ahtaApp.swift in Sources */,
+				EDD40BF52CA0ABC9005B25DC /* HabitRow.swift in Sources */,
+				EDD40BF62CA0ABC9005B25DC /* Habit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

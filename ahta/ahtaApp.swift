@@ -1,10 +1,3 @@
-//
-//  ahtaApp.swift
-//  ahta
-//
-//  Created by Lewis Gorman-Neale on 08/06/2024.
-//
-
 import SwiftUI
 
 @main
